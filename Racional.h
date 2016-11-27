@@ -2,18 +2,28 @@
 #define RACIONAL_H
 #include <iostream>
 
-int numerador, int denominador;
+class Racional{
 
-Racional sumar(Racional, Racional);
-Racional restar(Racional, Racional);
-Racional multiplicar(Racional, Racional);
-Racional dividir(Racional, Racional);
+  public:
 
-Racional operator + (int, Racional);
-Racional operator - (int, Racional);
-Racional operator * (int, Racional);
-Racional operator / (int, Racional);
-void simplificar();
+    int numerador, denominador;
+
+  public:
+
+    Racional(int, int);
+
+    Racional& operator + (Racional&);
+    Racional& operator - (Racional&);
+    Racional& operator * (Racional&);
+    Racional& operator / (Racional&);
+
+    /*Racional operator + (int, Racional);
+    Racional operator - (int, Racional);
+    Racional operator * (int, Racional);
+    Racional operator / (int, Racional);
+    */
+    void simplificar();
+    void imprimir();
 
 };
 #endif
